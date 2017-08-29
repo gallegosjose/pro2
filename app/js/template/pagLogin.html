@@ -1,0 +1,35 @@
+<script>
+    $(document).ready(function() {
+        $('input#idUsuario, textarea#textarea1').characterCounter();
+    });
+</script>
+<div class="container" >
+        <div class="row">
+            <div class="col s6 offset-s3">
+                <div class="card">
+                    <div class="card-content black-text">
+                        <div id="mensaje" class="row">{{mensaje}}</div>
+                        <div class="row">
+                            <div class="col s12">
+                                <span class="card-title center-align">Iniciar Sesión</span>
+                            </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="idUsuario" type="text" class="validate" ng-model="idUsuario" data-length="8" >
+                                <label for="idUsuario">DNI</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">lock</i>
+                                <input id="credencial" type="text" class="validate" ng-model="credencial">
+                                <label for="credencial">Credencial</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-action center-align">
+                        <a class="waves-effect " id="buttonEspecial" ng-click="entrarPag1()">Ingresar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

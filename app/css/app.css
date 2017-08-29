@@ -1,0 +1,98 @@
+body{
+    background-image: url("fondo_celeste.jpg");
+    background-size: 100%;
+}
+
+.bt1{
+    width: 275px;
+    height: 125px;
+
+}
+#button {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 44;
+    -moz-border-radius: 44;
+    border-radius: 44px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 35px;
+    border: solid #c41313 2px;
+    text-decoration: none;
+}
+
+#button:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+#buttonEspecial {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 30;
+    -moz-border-radius: 30;
+    border-radius: 30px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 15px;
+    border: solid #c41313 2px;
+    text-decoration: none;
+}
+
+#buttonEspecial:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+#vertical-bar {
+    border-left: 1px solid #ccc;
+    width:1px;
+    height:200px;
+    position: relative;
+    left: 50%;
+}
+
+.ir-arriba {
+    display:none;
+    padding:20px;
+    background: #2d95ff;
+    font-size:20px;
+    color:#fff;
+    cursor:pointer;
+    position: fixed;
+    bottom:20px;
+    right:20px;
+}
+#table1{
+    border: solid #a2ddff;
+
+}
+.rowRef{
+    border: solid #a2ddff;
+    width: 100%;
+    position: relative;
+    left: 0%;
+}
+#buttonOpciones{
+    position: relative;
+    left: 2%;
+}
+

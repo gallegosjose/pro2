@@ -1,0 +1,249 @@
+<div class="container">
+    <script>
+    $(document).ready(function() {
+    $('select').material_select();
+    });
+    $(document).ready(function(){
+        $('ul.tabs').tabs();
+    });
+    $(document).ready(function(){
+
+        $('.ir-arriba').click(function(){
+            $('body, html').animate({
+                scrollTop: '0px'
+            }, 300);
+        });
+
+        $(window).scroll(function(){
+            if( $(this).scrollTop() > 0 ){
+                $('.ir-arriba').slideDown(300);
+            } else {
+                $('.ir-arriba').slideUp(300);
+            }
+        });
+
+    });
+    </script>
+    <nav class="nav-extended grey lighten-2  ">
+        <div class="nav-content  blue darken-1">
+            <ul class="tabs tabs-transparent">
+                <li class="tab" ng-click="inicio()"><a >Inicio</a></li>
+                <li class="tab" ng-click="registrarHuellaActualizar()"><a >Nuevo registro</a></li>
+                <li class="tab right" ng-click="salir()"><a >Salir</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="card-panel white ">
+        <div ng-show="registroId">
+            <div class="row">
+                <div class="col s5">
+                    <div class="input-field">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="idUsuario" type="text" class="validate" ng-model=" idUsuario" data-length="8">
+                        <label for="idUsuario">DNI</label>
+                    </div>
+                    <div class="center-align">
+                        <a class="waves-effect" id="buttonEspecial"  ng-click="registrarDni()">REGISTRAR DNI</a>
+                    </div>
+                </div>
+                <div class="col s2">
+                    <div id="vertical-bar"></div>
+                </div>
+                <div class="col s5">
+                    <div class="center-align">
+                        <div class="row"></div><div class="row"></div><div class="row"></div>
+                        <a class="waves-effect" id="buttonEspecial"  ng-click="registrarHuella()">REGISTRAR HUELLA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-show="registrarDatos">
+            <div class=" row center-align">
+                <h7>DATOS PERSONALES</h7>
+            </div>
+            <table class="highlight">
+                <thead>
+                <tr><th></th></tr>
+                </thead>
+            </table>
+            <table id="table1" class="highlight bordered">
+                <tbody>
+                <tr>
+                    <th width="80%">DNI:</th>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <th width="80%">Nombre(s):</th>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <th width="80%">Apellidos:</th>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <th width="80%">Edad:</th>
+                    <td>---</td>
+                </tr>
+                <tr>
+                    <th width="80%">Requisitoriado:</th>
+                    <td>---</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="row"></div>
+            <div class=" row center-align">
+                <h7>DATOS DE LA EMERGENCIA</h7>
+            </div>
+            <table id="table1" class="highlight">
+                <tbody>
+                <tr>
+                    <th><select>
+                        <option value="" disabled selected>Estado de la persona</option>
+                        <option  value="1">estado 1</option>
+                        <option value="2">estado 2</option>
+                        <option value="3">estado 3</option>
+                    </select></th>
+                </tr>
+                <tr>
+                    <th><select multiple>
+                        <option value="" disabled selected>Tipo de urgencia según especialidad</option>
+                        <optgroup label="esp1">
+                            <option  value="1">urg1</option>
+                            <option value="2">urg2</option>
+                            <option value="3">urg3</option>
+                        </optgroup>
+                        <optgroup label="esp2">
+                            <option value="1">urg1</option>
+                            <option value="2">urg2</option>
+                            <option value="3">urg3</option>
+                        </optgroup>
+                        <optgroup label="esp3">
+                            <option value="1">urg1</option>
+                            <option value="2">urg2</option>
+                            <option value="3">urg3</option>
+                        </optgroup>
+                    </select></th>
+                </tr>
+                </tbody>
+            </table>
+            <div class="row"></div><div class="row"></div>
+            <div class="card-action center-align">
+                <a class="waves-effect" id="buttonEspecial"  ng-click="consultar()">CONSULTAR</a>
+            </div>
+            <div class="row"></div><div class="row"></div><div class="row"></div>
+
+            <div ng-show="refHospitales">
+            <div class="rowRef center-align">
+                <h5>REFERENCIA DE HOSPITALES DEL MINSA DISPONIBLES</h5>
+            </div>
+            <table id="table1" class="highlight bordered color-rect-border">
+
+                <tbody>
+                <tr>
+                    <th width="90%">
+                        <p>
+                        <input type="checkbox" class="filled-in" id="filled-in-box1"  />
+                        <label for="filled-in-box1">Hospital 1</label>
+                        </p>
+                    </th>
+                    <td>Disponible</td>
+                </tr>
+                <tr>
+                    <th width="90%">
+                        <p>
+                            <input type="checkbox" class="filled-in" id="filled-in-box2"  />
+                            <label for="filled-in-box2">Hospital 2</label>
+                        </p>
+                    </th>
+                    <td>Disponible</td>
+                </tr>
+                <tr>
+                    <th width="90%">
+                        <p>
+                            <input type="checkbox" class="filled-in" id="filled-in-box3" />
+                            <label for="filled-in-box3">Hospital 3</label>
+                        </p>
+                    </th>
+                    <td>Disponible</td>
+                </tr>
+                <tr>
+                    <th width="90%">
+                        <p>
+                        <input type="checkbox" id="test8" disabled="disabled" />
+                        <label for="test8">Hospital 4</label>
+                        </p>
+                    </th>
+                    <td width="90%">No Disponible</td>
+                </tr>
+                <tr>
+                    <th width="80%">
+                        <p>
+                            <input type="checkbox" id="test8" disabled="disabled" />
+                            <label for="test8">Hospital 1</label>
+                        </p>
+                    </th>
+                    <td >No Disponible</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="row"></div>
+            <div class="card-action center-align">
+                <a class="waves-effect" id="buttonEspecial"  ng-click="continuar()">CONTINUAR</a>
+            </div>
+            </div>
+            <div class="row"></div><div class="row"></div><div class="row"></div>
+            <div ng-show="resumen">
+                <div class="rowRef center-align">
+                    <h5>RESUMEN</h5>
+                </div>
+                <table id="table1" class="highlight bordered color-rect-border">
+
+                    <tbody>
+                    <tr>
+                        <th width="90%">DNI:</th>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <th width="90%">Nombre(s):</th>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <th width="90%">Apellidos:</th>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <th width="90%">Dirección de hospital:</th>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <th width="90%">Estado de la persona:</th>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <th width="90%">Tipo de urgencia:</th>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <th width="90%">Especialidad(es):</th>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <th width="90%">Requisitoriado:</th>
+                        <td>---</td>
+                    </tr>
+                    <tr>
+                        <th width="90%">Estado de la emergencia:</th>
+                        <td>---</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <span>
+            <i class=" waves-effect ir-arriba material-icons prefix">arrow_upward</i>
+            </span>
+
+        </div>
+    </div>
+
+</div>
