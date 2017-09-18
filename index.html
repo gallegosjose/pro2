@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Página</title>
+    <title>Akatsuki Web_3</title>
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,17 +16,22 @@
     <script type="text/javascript" src="vendor/materialize-0.98.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="vendor/angular-1.6/angular.min.js"></script>
     <script type="text/javascript" src="app/js/app.js"></script>
-    <script type="text/javascript" src="app/js/directive/directive.js"></script>
-    <script type="text/javascript" src="app/js/controller/controller.js"></script>
+    <script type="text/javascript" src="app/js/directive/akatsukiDirective.js"></script>
+    <script type="text/javascript" src="app/js/services/akatsukiService.js"></script>
+    <script type="text/javascript" src="app/js/controller/akatsukiController.js"></script>
 
 
 </head>
-<body ng-app="Biblioweb" ng-controller="controlador">
+<body ng-app="akatsukiApp" ng-controller="controlador">
 
 
-    <pag0 id="pagLogin" ng-show="pagLogin"></pag0>
-    <pag1 id="pagOpcionesRegistro" ng-show="pagOpcionesRegistro"></pag1>
-    <pag2 id="pagRegEmergConId" ng-show="pagRegEmergConId"></pag2>
-    <pag3 id="pagRegEmergSinId" ng-show="pagRegEmergSinId"></pag3>
+    <pag0 id="pagLoginCiudadano" ng-show="pagLoginCiudadano"></pag0>
+    <pag1 id="pagLoginEstablecimientoSalud" ng-show="pagLoginEstablecimientoSalud"></pag1>
+    <pag2 id="pagOpcionesRegistro" ng-show="pagOpcionesRegistro"></pag2>
+    <pag3 id="pagRegEmergConId" ng-show="pagRegEmergConId"></pag3>
+    <pag4 id="pagRegEmergSinId" ng-show="pagRegEmergSinId"></pag4>
+    <pag5 id="pagIdentificacion" ng-show="pagIdentificacion"></pag5>
+    <pag7 id="pagEmergencias" ng-show="pagEmergencias"></pag7>
+    <pag8 id="pagContactosEmergencia" ng-show="pagContactosEmergencia"></pag8>
 </body>
 </html>
