@@ -4,14 +4,17 @@
     });
 </script>
 <div class="container" >
+            <span>
+            <i class=" waves-effect ir-atras material-icons prefix" ng_click="atras1()">arrow_back</i>
+            </span>
+
         <div class="row">
             <div class="col s6 offset-s3">
                 <div class="card">
                     <div class="card-content black-text">
-                        <div id="mensaje" class="row">{{mensaje}}</div>
                         <div class="row">
                             <div class="col s12">
-                                <span class="card-title center-align">Iniciar Sesión</span>
+                                <span class="card-title center-align">Login Usuario</span>
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">account_circle</i>
@@ -20,16 +23,19 @@
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">lock</i>
-                                <input id="credencial" type="text" class="validate" ng-model="credencial">
-                                <label for="credencial">Credencial</label>
+                                <input id="clave" type="text" class="validate" ng-model="clave">
+                                <label for="clave">Clave</label>
                             </div>
                         </div>
 
                     </div>
                     <div class="card-action center-align">
-                        <a class="waves-effect " id="buttonEspecial" ng-click="entrarPag1()">Ingresar</a>
+                        <a class="waves-effect " id="buttonEspecial" ng-click="entrarPaginaContactosEmergencia()">Ingresar</a>
                     </div>
                 </div>
             </div>
         </div>
+    <span>
+        <i class=" waves-effect ir-arriba material-icons prefix">arrow_upward</i>
+    </span>
 </div>

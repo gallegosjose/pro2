@@ -1,0 +1,241 @@
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".dropdown-button").dropdown();
+        $(".button-collapse").sideNav();
+        $('.collapsible').collapsible();
+    });
+
+    $(document).ready(function(){
+        // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+    });
+</script>
+<div class="container" >
+    <nav class="light-blue darken-1">
+        <div class="nav-wrapper">
+            <ul class="left hide-on-med-and-down">
+                <li><a ng-click="entrarPagEmergencias()">Emergencias<span class="new badge blue lighten-4">3</span></a></li>
+                <li><a ng-click="entrarPagContactosEmergencia()">Contactos</a></li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+                <li><a ng-click="salir()">Salir</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="card-panel black-text">
+        <i class="material-icons prefix">person</i>
+        <h7><b>Usuario: Juan Carlos Garcia Chavez</b></h7>
+        <a class="waves-effect modal-trigger right" id="buttonEspecial" ng-click="agregarContacto()" href="#modalRegistro">+ AGREGAR CONTACTO</a>
+        <div id="modalRegistro" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col s12">
+                        <h5 class="center-align"><u><b>Registro</b></u></h5>
+                    </div>
+                    <div class="input-field col s8 offset-s2">
+                        <input id="idUsuario" type="text" class="validate" ng-model="idUsuario" data-length="8" >
+                        <label for="idUsuario">DNI</label>
+                    </div>
+                    <div class="input-field col s8 offset-s2">
+                        <input id="nombre" type="text" class="validate" ng-model="nombre">
+                        <label for="nombre">Nombre(s)</label>
+                    </div>
+                    <div class="input-field col s8 offset-s2">
+                        <input id="apellido" type="text" class="validate" ng-model="apellido">
+                        <label for="apellido">Apellidos</label>
+                    </div>
+                    <div class="input-field col s8 offset-s2">
+                        <input id="correo" type="text" class="validate" ng-model="correo">
+                        <label for="correo">Correo</label>
+                    </div>
+                    <div class="input-field col s8 offset-s2">
+                        <input id="celular" type="text" class="validate" ng-model="celular">
+                        <label for="celular">Celular</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a ng-click="#" class="modal-action modal-close waves-effect waves-green btn-flat ">ENVIAR SOLICITUD</a>
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">LIMPIAR</a>
+            </div>
+        </div>
+        <div class="row"></div>
+    </div>
+
+
+
+    <ul class="collapsible" data-collapsible="accordion">
+        <li>
+            <div class="collapsible-header"><i class="material-icons prefix">account_circle</i><b>Contacto: - - -</b></C></div>
+            <div class="collapsible-body">
+                <div class="card">
+                    <div class="card-content black-text">
+                        <div class="row">
+                            <div class="col s4">
+                                <div class="center-align">
+                                    <h6><u>FOTO</u></h6><div class="row"></div><div class="row"></div><div class="row"></div>
+                                    <img class="materialboxed fotoUsuario" src="app/img/FOTO_USUARIO.png" alt="HTML5 Icon" style="width:180px;height:200px;">
+                                </div>
+                            </div>
+                            <div class="col s1">
+                                <div id="vertical-bar2"></div>
+                            </div>
+                            <div class="col s7">
+                                <div class=" row center-align">
+                                    <h6><u>DATOS PERSONALES</u></h6>
+                                </div>
+                                <table class="highlight">
+                                    <thead>
+                                    <tr><th></th></tr>
+                                    </thead>
+                                </table>
+                                <table id="table1" class="highlight bordered">
+                                    <tbody>
+                                    <tr>
+                                        <th width="80%">DNI:</th>
+                                        <td>---</td>
+                                    </tr>
+                                    <tr>
+                                        <th width="80%">Nombre(s):</th>
+                                        <td>---</td>
+                                    </tr>
+                                    <tr>
+                                        <th width="80%">Apellidos:</th>
+                                        <td>---</td>
+                                    </tr>
+                                    <tr>
+                                        <th width="80%">Email:</th>
+                                        <td>---</td>
+                                    </tr>
+                                    <tr>
+                                        <th width="80%">Celular:</th>
+                                        <td>---</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="row"></div>
+                                <a class="waves-effect right" id="buttonEspecial"  ng-click="eliminarContacto()">QUITAR DE LA LISTA</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons prefix">account_circle</i><b>Contacto: - - -</b></div>
+            <div class="collapsible-body">
+                <div class="card">
+                    <div class="card-content black-text">
+                        <div class="row">
+                            <div class="col s4">
+                                <div class="center-align">
+                                    <h6><u>FOTO</u></h6><div class="row"></div><div class="row"></div><div class="row"></div>
+                                    <img class="materialboxed fotoUsuario" src="app/img/FOTO_USUARIO.png" alt="HTML5 Icon" style="width:180px;height:200px;">
+                                </div>
+                            </div>
+                            <div class="col s1">
+                                <div id="vertical-bar2"></div>
+                            </div>
+                            <div class="col s7">
+                                <div class=" row center-align">
+                                    <h6><u>DATOS PERSONALES</u></h6>
+                                </div>
+                                <table class="highlight">
+                                    <thead>
+                                    <tr><th></th></tr>
+                                    </thead>
+                                </table>
+                                <table id="table1" class="highlight bordered">
+                                    <tbody>
+                                    <tr>
+                                        <th width="80%">DNI:</th>
+                                        <td>---</td>
+                                    </tr>
+                                    <tr>
+                                        <th width="80%">Nombre(s):</th>
+                                        <td>---</td>
+                                    </tr>
+                                    <tr>
+                                        <th width="80%">Apellidos:</th>
+                                        <td>---</td>
+                                    </tr>
+                                    <tr>
+                                        <th width="80%">Email:</th>
+                                        <td>---</td>
+                                    </tr>
+                                    <tr>
+                                        <th width="80%">Celular:</th>
+                                        <td>---</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="row"></div>
+                                <a class="waves-effect right" id="buttonEspecial" ng-click="eliminarContacto()">QUITAR DE LA LISTA</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons prefix">account_circle</i><b>Contacto: - - -</b></div>
+            <div class="collapsible-body">
+                <div class="card">
+                    <div class="card-content black-text">
+                        <div class="row">
+                            <div class="col s4">
+                                <div class="center-align">
+                                    <h6><u>FOTO</u></h6><div class="row"></div><div class="row"></div><div class="row"></div>
+                                    <img class="materialboxed fotoUsuario" src="app/img/FOTO_USUARIO.png" alt="HTML5 Icon" style="width:180px;height:200px;">
+                                </div>
+                            </div>
+                            <div class="col s1">
+                                <div id="vertical-bar2"></div>
+                            </div>
+                            <div class="col s7">
+                                <div class=" row center-align">
+                                    <h6><u>DATOS PERSONALES</u></h6>
+                                </div>
+                                <table class="highlight">
+                                    <thead>
+                                    <tr><th></th></tr>
+                                    </thead>
+                                </table>
+                                <table id="table1" class="highlight bordered">
+                                    <tbody>
+                                    <tr>
+                                        <th width="80%">DNI:</th>
+                                        <td>---</td>
+                                    </tr>
+                                    <tr>
+                                        <th width="80%">Nombre(s):</th>
+                                        <td>---</td>
+                                    </tr>
+                                    <tr>
+                                        <th width="80%">Apellidos:</th>
+                                        <td>---</td>
+                                    </tr>
+                                    <tr>
+                                        <th width="80%">Email:</th>
+                                        <td>---</td>
+                                    </tr>
+                                    <tr>
+                                        <th width="80%">Celular:</th>
+                                        <td>---</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="row"></div>
+                                <a class="waves-effect right" id="buttonEspecial"  ng-click="eliminarContacto()">QUITAR DE LA LISTA</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <span>
+        <i class=" waves-effect ir-arriba material-icons prefix">arrow_upward</i>
+    </span>
+</div>

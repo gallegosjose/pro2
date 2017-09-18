@@ -62,14 +62,20 @@ body{
     background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
     text-decoration: none;
 }
-#vertical-bar {
+#vertical-bar2 {
     border-left: 1px solid #ccc;
-    width:1px;
-    height:200px;
+    width:4px;
+    height:370px;
     position: relative;
     left: 50%;
 }
-
+#vertical-bar {
+    border-left: 2px solid #ccc;
+    width:1px;
+    height:190px;
+    position: relative;
+    left: 50%;
+}
 .ir-arriba {
     display:none;
     padding:20px;
@@ -80,6 +86,16 @@ body{
     position: fixed;
     bottom:20px;
     right:20px;
+}
+.ir-atras {
+    padding:20px;
+    background: #2d95ff;
+    font-size:20px;
+    color:#fff;
+    cursor:pointer;
+    position: sticky;
+    bottom:20px;
+
 }
 #table1{
     border: solid #a2ddff;
@@ -95,4 +111,7 @@ body{
     position: relative;
     left: 2%;
 }
-
+.fotoUsuario{
+    position: relative;
+    left: 23%;
+}
